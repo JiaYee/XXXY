@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Item } from '../../models/item';
-
+ 
 @Injectable()
 export class Items {
   items: Item[] = [];
@@ -16,40 +16,60 @@ export class Items {
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "我家书房霸王机",
+        "model": "Canon MP287",
+        "isOwner": true,
+        "isShared": false,
+        "status": "online",
+        "distance": "2.54km",
+        "profilePic": "assets/img/mp287.jpg",
+        "inklevel": 97,
+        "paperlevel": 23,
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "我办公室里的",
+        "model": "Canon G2000",
+        "isOwner": true,
+        "isShared": false,
+        "status": "oop",
+        "distance": "0.1km",
+        "profilePic": "assets/img/g2000.jpg",
+        "inklevel": 97,
+        "paperlevel": 23,
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "隔壁老王家里",
+        "model": "Brother HL2260",
+        "isOwner": false,
+        "isShared": false,
+        "status": "ooi",
+        "distance": "2.90km",
+        "profilePic": "assets/img/hl2260.jpg",
+        "inklevel": 2,
+        "paperlevel": 34,
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "领导办公室",
+        "model": "HP M104",
+        "isOwner": false,
+        "isShared": false,
+        "status": "offline",
+        "distance": "0.1km",
+        "profilePic": "assets/img/m104.jpg",
+        "inklevel": 67,
+        "paperlevel": 213,
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "name": "一教二楼自助",
+        "model": "EPSON L220",
+        "isOwner": true,
+        "isShared": true,
+        "status": "eom",
+        "distance": "0.1km",
+        "profilePic": "assets/img/l220.jpg",
+        "inklevel": 54,
+        "paperlevel": 34,
       },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
-      }
     ];
 
     for (let item of items) {

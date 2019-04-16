@@ -1,9 +1,12 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{ item.name }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="sharePrinter()">
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -11,8 +14,51 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
 
-  <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
+  <div class="item-detail">
+    <ion-grid style="grid">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <h1 style="color: #ffc300;">{{ item.paperlevel }}张</h1>
+            <p>{{ 'ITEM_DETAIL_PAPER' | translate }}</p>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <h1 style="color: #2196f3;">{{ item.inklevel }}%</h1>
+            <p>{{ 'ITEM_DETAIL_INK' | translate }}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list>
+      <button ion-item (click)="shutdown()">
+        <ion-icon name="power"></ion-icon>
+        {{ 'ITEM_DETAIL_BUTTON_POWER' | translate }}
+      </button>
+      <button ion-item (click)="reboot()">
+        <ion-icon name="refresh"></ion-icon>
+        {{ 'ITEM_DETAIL_BUTTON_REBOOT' | translate }}
+      </button>
+      <button ion-item (click)="clean()">
+        <ion-icon name="water"></ion-icon>
+        {{ 'ITEM_DETAIL_BUTTON_CLEAN' | translate }}
+      </button>
+      <button ion-item (click)="goMaintenance()">
+        <ion-icon name="settings"></ion-icon>
+        {{ 'ITEM_DETAIL_BUTTON_MAINTENANCE' | translate }}
+      </button>
+      </ion-list>
   </div>
 </ion-content>
+
+<ion-footer>
+  <button *ngIf="item.status !== 'eom' && item.status !== 'offline'" ion-button full (click)="goPrint()">
+    <ion-icon name="print"></ion-icon>
+    {{ 'ITEM_DETAIL_BUTTON_PRINT' | translate }}
+  </button>
+  <button disabled *ngIf="item.status === 'eom' || item.status === 'offline'" ion-button full color="danger">
+    <ion-icon name="print"></ion-icon>
+    {{ 'ITEM_DETAIL_BUTTON_ERROR' | translate }}
+  </button>
+</ion-footer>

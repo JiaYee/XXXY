@@ -1,68 +1,76 @@
 {
-  "BACK_BUTTON_TEXT": "Back",
+  "BACK_BUTTON_TEXT": "回退",
 
-  "NAME": "Name",
-  "EMAIL": "Email",
-  "USERNAME": "Username",
-  "PASSWORD": "Password",
-  "LOGIN": "Sign in",
-  "SIGNUP": "Sign up",
+  "NAME": "姓名",
+  "EMAIL": "邮箱",
+  "USERNAME": "登录名",
+  "PASSWORD": "口令",
+  "LOGIN": "微信登录",
+  "SIGNUP": "注 册",
 
-  "TAB1_TITLE": "Items",
-  "TAB2_TITLE": "Search",
-  "TAB3_TITLE": "Settings",
+  "TAB1_TITLE": "打印",
+  "TAB2_TITLE": "共享",
+  "TAB3_TITLE": "订单",
 
-  "MAP_TITLE": "Map",
+  "MAP_TITLE": "地图",
 
-  "TUTORIAL_SKIP_BUTTON": "Skip",
-  "TUTORIAL_CONTINUE_BUTTON": "Continue",
+  "TUTORIAL_SKIP_BUTTON": "跳过",
+  "TUTORIAL_CONTINUE_BUTTON": "继续",
+  "TUTORIAL_SLIDE1_TITLE": "欢迎来到心馨相印",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>打印，就是这么简单</b>",
+  "TUTORIAL_SLIDE2_TITLE": "轻轻一点，搜寻附近打印机",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "不再烦恼找不着文印店了",
+  "TUTORIAL_SLIDE3_TITLE": "添加私人打印设备",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "移动打印已经来到你的眼前",
+  "TUTORIAL_SLIDE4_TITLE": "开始体验？",
+  "WELCOME_INTRO": "立即体验移动打印的时代",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "SETTINGS_TITLE": "设置",
+  "SETTINGS_OPTION1": "选项 1",
+  "SETTINGS_OPTION2": "选项 2",
+  "SETTINGS_OPTION3": "选项 3",
+  "SETTINGS_OPTION4": "选项 4",
+  "SETTINGS_PROFILE_BUTTON": "编辑资料",
+  "SETTINGS_PAGE_PROFILE": "编辑资料",
 
-  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+  "WELCOME_TITLE": "欢迎",
+  "LOGIN_TITLE": "微信登录",
+  "LOGIN_ERROR": "无法登录。请检查账号信息然后重试。",
+  "LOGIN_BUTTON": "微信登录",
+  "SIGNUP_TITLE": "注 册",
+  "SIGNUP_ERROR": "无法创建账号。请检查账户信息然后重试。",
+  "SIGNUP_BUTTON": "注 册",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+  "LIST_MASTER_TITLE": "我的打印机",
+  "ITEM_DETAIL_PAPER": "纸量",
+  "ITEM_DETAIL_INK": "墨量",
+  "ITEM_DETAIL_BUTTON_PRINT": "打印文件",
+  "ITEM_DETAIL_BUTTON_ERROR": "请检查机器",
+  "ITEM_DETAIL_BUTTON_POWER": "关闭打印机",
+  "ITEM_DETAIL_BUTTON_REBOOT": "重启打印机",
+  "ITEM_DETAIL_BUTTON_CLEAN": "清理墨头",
+  "ITEM_DETAIL_BUTTON_MAINTENANCE": "维修里程",
 
-  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
+  "MILEAGE_TITLE": "维修里程",
 
-  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "ITEM_CREATE_TITLE": "新项目",
+  "ITEM_CREATE_CHOOSE_IMAGE": "添加图片",
 
-  "SETTINGS_TITLE": "Settings",
-  "SETTINGS_OPTION1": "Option 1",
-  "SETTINGS_OPTION2": "Option 2",
-  "SETTINGS_OPTION3": "Option 3",
-  "SETTINGS_OPTION4": "Option 4",
+  "ITEM_NAME_PLACEHOLDER": "名称",
+  "ITEM_ABOUT_PLACEHOLDER": "关于",
 
-  "SETTINGS_PROFILE_BUTTON": "Edit Profile",
+  "DONE_BUTTON": "完 成",
+  "CANCEL_BUTTON": "取 消",
+  "DELETE_BUTTON": "删 除",
 
-  "SETTINGS_PAGE_PROFILE": "Edit Profile",
+  "CARDS_TITLE": "社交",
 
-  "WELCOME_TITLE": "Welcome",
+  "STATUS_ONLINE": "在线",
+  "STATUS_OFFLINE": "离线",
+  "STATUS_OOP": "纸量不足",
+  "STATUS_OOI": "墨水不足",
+  "STATUS_EOM": "机身异常",
 
-  "LOGIN_TITLE": "Sign in",
-  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
-  "LOGIN_BUTTON": "Sign in",
-  "SIGNUP_TITLE": "Sign up",
-  "SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
-  "SIGNUP_BUTTON": "Sign up",
-
-  "LIST_MASTER_TITLE": "Items",
-
-  "ITEM_CREATE_TITLE": "New Item",
-  "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
-
-  "ITEM_NAME_PLACEHOLDER": "Name",
-  "ITEM_ABOUT_PLACEHOLDER": "About",
-
-  "DONE_BUTTON": "Done",
-  "CANCEL_BUTTON": "Cancel",
-  "DELETE_BUTTON": "Delete",
-
-  "CARDS_TITLE": "Social",
-
-  "SEARCH_TITLE": "Search",
-  "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\""
+  "SEARCH_TITLE": "共享打印机",
+  "SEARCH_PLACEHOLDER": "搜索地方, 比如：\"图书馆\""
 }

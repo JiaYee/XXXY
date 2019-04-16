@@ -10,5 +10,13 @@ page-item-detail {
     width: 100%;
     background: white;
     position: absolute;
+    text-align: center;
   }
+
+  .grid h1 {
+    font-size: 300%;
+    font-weight: bolder;
+    padding: inherit;
+  }
+
 }
