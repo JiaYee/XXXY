@@ -19,31 +19,36 @@ export class SearchPage {
     public items: Items
   )
   {
+  }
+
+  ionViewDidLoad()
+  {
+    this.getItems();
+  }
+
+  getItems()
+  {
     this.currentItems = this.items.query({
       isShared: true
     })
   }
 
-  /**
-   * Perform a service for the proper items.
-   */
-  getItems(ev)
-  {
-    let val = ev.target.value;
-    if(val == "" || val == undefined)
-    {
-      this.currentItems = this.items.query({
-        isShared: true
-      })
-    }
-    else
-    {
-      this.currentItems = this.items.query({
-        isShared: true,
-        name: val
-      });
-    }
-  }
+   searchItems(ev: any)
+   {
+     // Reset items back to all of the items
+     this.getItems();
+
+     // set val to the value of the searchbar
+     let val = ev.target.value;
+     console.log(val)
+
+     // if the value is an empty string don't filter the items
+     if (val && val.trim() != '') {
+       this.currentItems = this.currentItems.filter((item) => {
+         return (item.name.toLowerCase().indexOf(val.toString().toLowerCase()) > -1);
+       })
+     }
+   }
 
   /**
    * Navigate to the detail page for this item.
