@@ -21,33 +21,23 @@ export class TutorialPage {
 
   constructor(public navCtrl: NavController, public menu: MenuController, translate: TranslateService, public platform: Platform) {
     this.dir = platform.dir();
-    translate.get(["TUTORIAL_SLIDE1_TITLE",
-      "TUTORIAL_SLIDE1_DESCRIPTION",
-      "TUTORIAL_SLIDE2_TITLE",
-      "TUTORIAL_SLIDE2_DESCRIPTION",
-      "TUTORIAL_SLIDE3_TITLE",
-      "TUTORIAL_SLIDE3_DESCRIPTION",
-    ]).subscribe(
-      (values) => {
-        console.log('Loaded values', values);
-        this.slides = [
-          {
-            title: values.TUTORIAL_SLIDE1_TITLE,
-            description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
-          },
-          {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
-          },
-          {
-            title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
-          }
-        ];
-      });
+    this.slides = [
+      {
+        title: "欢迎来到心馨相印",
+        description: "<b>打印，就是这么简单</b>",
+        image: 'assets/img/ica-slidebox-img-1.png',
+      },
+      {
+        title: "轻轻一点，搜寻附近打印机",
+        description: "不再烦恼找不着文印店了",
+        image: 'assets/img/ica-slidebox-img-2.png',
+      },
+      {
+        title: "添加私人打印设备",
+        description: "移动打印已经来到你的眼前",
+        image: 'assets/img/ica-slidebox-img-3.png',
+      }
+    ];
   }
 
   startApp() {

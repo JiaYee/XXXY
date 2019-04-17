@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
+    <ion-title>共享打印机</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar (ionInput)="searchItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <ion-searchbar (ionInput)="searchItems($event)" placeholder="搜索地方, 比如：'图书馆'"></ion-searchbar>
   <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
@@ -16,11 +16,11 @@
         <p>{{ item.distance }}km</p>
         <!-- <ion-icon *ngIf="!item.isOwner" name="link" item-right></ion-icon> -->
         <ion-icon *ngIf="item.isShared" name="globe" item-right></ion-icon>
-        <ion-badge *ngIf="item.status === 'online'" item-right color="secondary">{{ 'STATUS_ONLINE' | translate }}</ion-badge>
-        <ion-badge *ngIf="item.status === 'offline'" item-right color="dark">{{ 'STATUS_OFFLINE' | translate }}</ion-badge>
-        <ion-badge *ngIf="item.status === 'oop'" item-right color="warning">{{ 'STATUS_OOP' | translate }}</ion-badge>
-        <ion-badge *ngIf="item.status === 'ooi'" item-right color="warning">{{ 'STATUS_OOI' | translate }}</ion-badge>
-        <ion-badge *ngIf="item.status === 'eom'" item-right color="danger">{{ 'STATUS_EOM' | translate }}</ion-badge>
+        <ion-badge *ngIf="item.status === 'online'" item-right color="secondary">在线</ion-badge>
+        <ion-badge *ngIf="item.status === 'offline'" item-right color="dark">离线</ion-badge>
+        <ion-badge *ngIf="item.status === 'oop'" item-right color="warning">纸量不足</ion-badge>
+        <ion-badge *ngIf="item.status === 'ooi'" item-right color="warning">墨水不足</ion-badge>
+        <ion-badge *ngIf="item.status === 'eom'" item-right color="danger">机身异常</ion-badge>
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
 

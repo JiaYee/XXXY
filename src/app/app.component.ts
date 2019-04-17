@@ -53,7 +53,7 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-    this.initTranslate();
+    // this.initTranslate();
   }
 
   initTranslate() {

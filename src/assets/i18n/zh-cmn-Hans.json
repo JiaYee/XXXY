@@ -5,51 +5,54 @@
   "EMAIL": "邮箱",
   "USERNAME": "登录名",
   "PASSWORD": "口令",
-  "LOGIN": "登 录",
+  "LOGIN": "微信登录",
   "SIGNUP": "注 册",
 
-  "TAB1_TITLE": "项目",
-  "TAB2_TITLE": "搜索",
-  "TAB3_TITLE": "设置",
+  "TAB1_TITLE": "首页",
+  "TAB2_TITLE": "共享",
+  "TAB3_TITLE": "订单",
 
   "MAP_TITLE": "地图",
 
   "TUTORIAL_SKIP_BUTTON": "跳过",
   "TUTORIAL_CONTINUE_BUTTON": "继续",
-
-  "TUTORIAL_SLIDE1_TITLE": "欢迎来到 Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> 是一个功能全面，内置多个页面以及最佳实践的 Ionic 入门教程。",
-
-  "TUTORIAL_SLIDE2_TITLE": "如何使用 Super 入门教程",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "使用你需要的多种多样的页面删除你不需要的页面。我们提供许多常见移动 app 页面，如登录、注册页面，tabs 标签页，以及本教程页面。",
-
-  "TUTORIAL_SLIDE3_TITLE": "开始",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "需要帮助？查看 Super 入门教程的帮助文档，可获得完整教程。",
-
-  "TUTORIAL_SLIDE4_TITLE": "开始学习？",
-
-  "WELCOME_INTRO": "出发，你的下一个强大的 Ionic app",
+  "TUTORIAL_SLIDE1_TITLE": "欢迎来到心馨相印",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>打印，就是这么简单</b>",
+  "TUTORIAL_SLIDE2_TITLE": "轻轻一点，搜寻附近打印机",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "不再烦恼找不着文印店了",
+  "TUTORIAL_SLIDE3_TITLE": "添加私人打印设备",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "移动打印已经来到你的眼前",
+  "TUTORIAL_SLIDE4_TITLE": "开始体验？",
+  "WELCOME_INTRO": "立即体验移动打印的时代",
 
   "SETTINGS_TITLE": "设置",
   "SETTINGS_OPTION1": "选项 1",
   "SETTINGS_OPTION2": "选项 2",
   "SETTINGS_OPTION3": "选项 3",
   "SETTINGS_OPTION4": "选项 4",
-
   "SETTINGS_PROFILE_BUTTON": "编辑资料",
-
   "SETTINGS_PAGE_PROFILE": "编辑资料",
 
   "WELCOME_TITLE": "欢迎",
-
-  "LOGIN_TITLE": "登录",
+  "LOGIN_TITLE": "微信登录",
   "LOGIN_ERROR": "无法登录。请检查账号信息然后重试。",
-  "LOGIN_BUTTON": "登 录",
+  "LOGIN_BUTTON": "微信登录",
   "SIGNUP_TITLE": "注 册",
   "SIGNUP_ERROR": "无法创建账号。请检查账户信息然后重试。",
   "SIGNUP_BUTTON": "注 册",
 
-  "LIST_MASTER_TITLE": "项目",
+  "LIST_MASTER_TITLE": "我的打印机",
+  "ITEM_DETAIL_PAPER": "纸量",
+  "ITEM_DETAIL_INK": "墨量",
+  "ITEM_DETAIL_BUTTON_PRINT": "打印文件",
+  "ITEM_DETAIL_BUTTON_ERROR": "请检查机器",
+  "ITEM_DETAIL_BUTTON_TURNON": "开启打印机",
+  "ITEM_DETAIL_BUTTON_SHUTDOWN": "关闭打印机",
+  "ITEM_DETAIL_BUTTON_REBOOT": "重启打印机",
+  "ITEM_DETAIL_BUTTON_CLEAN": "清理墨头",
+  "ITEM_DETAIL_BUTTON_MAINTENANCE": "维修里程",
+
+  "MILEAGE_TITLE": "维修里程",
 
   "ITEM_CREATE_TITLE": "新项目",
   "ITEM_CREATE_CHOOSE_IMAGE": "添加图片",
@@ -63,6 +66,23 @@
 
   "CARDS_TITLE": "社交",
 
-  "SEARCH_TITLE": "搜索",
-  "SEARCH_PLACEHOLDER": "搜索项目列表, 比如：\"Donald Duck\""
+  "STATUS_ONLINE": "在线",
+  "STATUS_OFFLINE": "离线",
+  "STATUS_OOP": "纸量不足",
+  "STATUS_OOI": "墨水不足",
+  "STATUS_EOM": "机身异常",
+
+  "SEARCH_TITLE": "共享打印机",
+  "SEARCH_PLACEHOLDER": "搜索地方, 比如：\"图书馆\"",
+
+  "PRINT_TITLE": "打印设置",
+  "PRINT_BUTTON_UPLOAD": "上传文件",
+  "PRINT_BUTTON_RANGE": "打印范围",
+  "PRINT_BUTTON_RANGE_ALL": "全文",
+  "PRINT_BUTTON_COPIES": "打印份数",
+  "PRINT_BUTTON_PAPERTYPE": "纸张类型",
+  "PRINT_BUTTON_BNW": "色彩",
+  "PRINT_BUTTON_DUPLEX": "双面打印",
+  "PRINT_BUTTON_ORIENTATION": "纸张方向",
+  "PRINT_BUTTON_UNITPRICE": "单价"
 }

@@ -19,13 +19,13 @@
         <ion-col>
           <ion-card>
             <h1 style="color: #ffc300;">{{ item.paperlevel }}张</h1>
-            <p>{{ 'ITEM_DETAIL_PAPER' | translate }}</p>
+            <p>纸量</p>
           </ion-card>
         </ion-col>
         <ion-col>
           <ion-card>
             <h1 style="color: #2196f3;">{{ item.inklevel }}%</h1>
-            <p>{{ 'ITEM_DETAIL_INK' | translate }}</p>
+            <p>墨量</p>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -33,28 +33,28 @@
     <ion-list *ngIf="item.isOwner">
       <button *ngIf="item.status === 'offline'" ion-item (click)="turnOn()">
         <ion-icon name="power"></ion-icon>
-        {{ 'ITEM_DETAIL_BUTTON_TURNON' | translate }}
+        开启打印机
       </button>
       <button disabled *ngIf="item.status === 'eom'" ion-item>
         <ion-icon name="power"></ion-icon>
-        {{ 'ITEM_DETAIL_BUTTON_TURNON' | translate }}
+        开启打印机
       </button>
       <div *ngIf="item.status !== 'eom' && item.status !== 'offline'">
         <button ion-item (click)="shutdown()">
           <ion-icon name="power"></ion-icon>
-          {{ 'ITEM_DETAIL_BUTTON_SHUTDOWN' | translate }}
+          关闭打印机
         </button>
         <button ion-item (click)="reboot()">
           <ion-icon name="refresh"></ion-icon>
-          {{ 'ITEM_DETAIL_BUTTON_REBOOT' | translate }}
+          重启打印机
         </button>
         <button ion-item (click)="clean()">
           <ion-icon name="water"></ion-icon>
-          {{ 'ITEM_DETAIL_BUTTON_CLEAN' | translate }}
+          清理墨头
         </button>
         <button ion-item (click)="goMaintenance()">
           <ion-icon name="settings"></ion-icon>
-          {{ 'ITEM_DETAIL_BUTTON_MAINTENANCE' | translate }}
+          维修里程
         </button>
       </div>
     </ion-list>
@@ -64,10 +64,10 @@
 <ion-footer>
   <button *ngIf="item.status !== 'eom' && item.status !== 'offline'" ion-button full (click)="goPrint()">
     <ion-icon name="print"></ion-icon>
-    {{ 'ITEM_DETAIL_BUTTON_PRINT' | translate }}
+    打印文件
   </button>
   <button disabled *ngIf="item.status === 'eom' || item.status === 'offline'" ion-button full color="danger">
     <ion-icon name="print"></ion-icon>
-    {{ 'ITEM_DETAIL_BUTTON_ERROR' | translate }}
+    请检查机器
   </button>
 </ion-footer>

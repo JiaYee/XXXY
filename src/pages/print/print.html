@@ -6,49 +6,49 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ 'PRINT_TITLE' | translate }}</ion-title>
+    <ion-title>打印设置</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <button ion-button full (click)="uploadDoc()">
     <ion-icon name="cloud-upload"></ion-icon>
-    {{ 'PRINT_BUTTON_UPLOAD' | translate }}
+    上传文件
   </button>
   <ion-list>
     <ion-item>
-      {{ 'PRINT_BUTTON_RANGE' | translate }}
+      打印范围
       <button ion-button small round item-right>{{ 'PRINT_BUTTON_RANGE_ALL' | translate }}</button>
     </ion-item>
     <ion-item>
-      {{ 'PRINT_BUTTON_COPIES' | translate }}
+      打印份数
       <button ion-button small round item-right (click)="minusCopies()">-</button>
       <p item-right>{{ copies }}</p>
       <button ion-button small round item-right (click)="addCopies()">+</button>
     </ion-item>
     <ion-item>
-      {{ 'PRINT_BUTTON_PAPERTYPE' | translate }}
+      纸张类型
       <button *ngIf="checkPaperType('A3')" (click)="setPaperType('A3')" ion-button small round item-right>A3</button>
       <button *ngIf="!checkPaperType('A3')" (click)="setPaperType('A3')" ion-button outline small round item-right>A3</button>
       <button *ngIf="checkPaperType('A4')" (click)="setPaperType('A4')" ion-button small round item-right>A4</button>
       <button *ngIf="!checkPaperType('A4')" (click)="setPaperType('A4')" ion-button outline small round item-right>A4</button>
     </ion-item>
     <ion-item>
-      {{ 'PRINT_BUTTON_BNW' | translate }}
+      色彩
       <button *ngIf="checkBNW('彩色')" (click)="setBNW('彩色')" ion-button small round item-right>彩色</button>
       <button *ngIf="!checkBNW('彩色')" (click)="setBNW('彩色')" ion-button outline small round item-right>彩色</button>
       <button *ngIf="checkBNW('黑白')" (click)="setBNW('黑白')" ion-button small round item-right>黑白</button>
       <button *ngIf="!checkBNW('黑白')" (click)="setBNW('黑白')" ion-button outline small round item-right>黑白</button>
     </ion-item>
     <ion-item>
-      {{ 'PRINT_BUTTON_DUPLEX' | translate }}
+      双面打印
       <button *ngIf="checkDuplex('单面')" (click)="setDuplex('单面')" ion-button small round item-right>单面</button>
       <button *ngIf="!checkDuplex('单面')" (click)="setDuplex('单面')" ion-button outline small round item-right>单面</button>
       <button *ngIf="checkDuplex('双面')" (click)="setDuplex('双面')" ion-button small round item-right>双面</button>
       <button *ngIf="!checkDuplex('双面')" (click)="setDuplex('双面')" ion-button outline small round item-right>双面</button>
     </ion-item>
     <ion-item>
-      {{ 'PRINT_BUTTON_ORIENTATION' | translate }}
+      纸张方向
       <button *ngIf="checkOrientation('横向')" (click)="setOrientation('横向')" ion-button small round item-right>横向</button>
       <button *ngIf="!checkOrientation('横向')" (click)="setOrientation('横向')" ion-button outline small round item-right>横向</button>
       <button *ngIf="checkOrientation('纵向')" (click)="setOrientation('纵向')" ion-button small round item-right>纵向</button>
