@@ -13,20 +13,36 @@ export class SearchPage {
 
   currentItems: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public items: Items
+  )
+  {
+    this.currentItems = this.items.query({
+      isShared: true
+    })
+  }
 
   /**
    * Perform a service for the proper items.
    */
-  getItems(ev) {
+  getItems(ev)
+  {
     let val = ev.target.value;
-    if (!val || !val.trim()) {
-      this.currentItems = [];
-      return;
+    if(val == "" || val == undefined)
+    {
+      this.currentItems = this.items.query({
+        isShared: true
+      })
     }
-    this.currentItems = this.items.query({
-      name: val
-    });
+    else
+    {
+      this.currentItems = this.items.query({
+        isShared: true,
+        name: val
+      });
+    }
   }
 
   /**

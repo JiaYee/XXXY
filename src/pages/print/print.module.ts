@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+import { PrintPage } from './print';
 import { TranslateModule } from '@ngx-translate/core';
-import { MileagePage } from './mileage';
-import { ProgressBarModule } from "angular-progress-bar"
 
 @NgModule({
   declarations: [
-    MileagePage,
+    PrintPage,
   ],
   imports: [
-    ProgressBarModule,
-    IonicPageModule.forChild(MileagePage),
+    IonicPageModule.forChild(PrintPage),
     TranslateModule.forChild()
   ],
 })
-export class MileagePageModule {}
+export class PrintPageModule {}

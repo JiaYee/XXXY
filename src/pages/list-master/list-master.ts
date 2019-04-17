@@ -13,7 +13,11 @@ export class ListMasterPage {
   currentItems: Item[];
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+    let data = this.items.query();
+    this.currentItems = data.filter(function (node) {
+      return node.isOwner == true ||
+      node.isFriend == true
+    });
   }
 
   /**

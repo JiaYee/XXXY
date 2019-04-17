@@ -27,6 +27,7 @@
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
+    "angular-progress-bar": "^1.0.9",
     "ionic-angular": "3.9.3",
     "ionicons": "3.0.0",
     "react": "^16.8.6",

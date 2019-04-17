@@ -28,6 +28,12 @@ export class ItemDetailPage {
       this.item = navParams.get('item') || items.defaultItem;
     }
 
+  goPrint()
+  {
+    let item = this.item;
+    this.navCtrl.push('PrintPage', { item });
+  }
+
   sharePrinter()
   {
     let actionSheet = this.actionSheetCtrl.create({
@@ -47,10 +53,25 @@ export class ItemDetailPage {
             this.common.showToast("成功分享到微信！");
           }
         },
+        {
+          text: '列为共享打印机',
+          icon: 'globe',
+          handler: () => {
+            this.item.isShared = true;
+            this.navCtrl.pop();
+            this.common.showToast("成功列为共享打印机！");
+          }
+        },
       ]
     });
 
     actionSheet.present();
+  }
+
+  turnOn()
+  {
+    this.item.status = "online";
+    this.common.showToast("打印机已开启");
   }
 
   shutdown()
@@ -62,6 +83,7 @@ export class ItemDetailPage {
 
   reboot()
   {
+    this.item.status = "online";
     this.navCtrl.pop();
     this.common.showToast("打印机已重启");
   }

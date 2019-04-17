@@ -2,13 +2,12 @@
   <ion-navbar>
     <ion-title>{{ item.name }}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="sharePrinter()">
+      <button *ngIf="item.isOwner" ion-button icon-only (click)="sharePrinter()">
         <ion-icon name="share"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 
 <ion-content>
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
@@ -31,24 +30,34 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <ion-list>
-      <button ion-item (click)="shutdown()">
+    <ion-list *ngIf="item.isOwner">
+      <button *ngIf="item.status === 'offline'" ion-item (click)="turnOn()">
         <ion-icon name="power"></ion-icon>
-        {{ 'ITEM_DETAIL_BUTTON_POWER' | translate }}
+        {{ 'ITEM_DETAIL_BUTTON_TURNON' | translate }}
       </button>
-      <button ion-item (click)="reboot()">
-        <ion-icon name="refresh"></ion-icon>
-        {{ 'ITEM_DETAIL_BUTTON_REBOOT' | translate }}
+      <button disabled *ngIf="item.status === 'eom'" ion-item>
+        <ion-icon name="power"></ion-icon>
+        {{ 'ITEM_DETAIL_BUTTON_TURNON' | translate }}
       </button>
-      <button ion-item (click)="clean()">
-        <ion-icon name="water"></ion-icon>
-        {{ 'ITEM_DETAIL_BUTTON_CLEAN' | translate }}
-      </button>
-      <button ion-item (click)="goMaintenance()">
-        <ion-icon name="settings"></ion-icon>
-        {{ 'ITEM_DETAIL_BUTTON_MAINTENANCE' | translate }}
-      </button>
-      </ion-list>
+      <div *ngIf="item.status !== 'eom' && item.status !== 'offline'">
+        <button ion-item (click)="shutdown()">
+          <ion-icon name="power"></ion-icon>
+          {{ 'ITEM_DETAIL_BUTTON_SHUTDOWN' | translate }}
+        </button>
+        <button ion-item (click)="reboot()">
+          <ion-icon name="refresh"></ion-icon>
+          {{ 'ITEM_DETAIL_BUTTON_REBOOT' | translate }}
+        </button>
+        <button ion-item (click)="clean()">
+          <ion-icon name="water"></ion-icon>
+          {{ 'ITEM_DETAIL_BUTTON_CLEAN' | translate }}
+        </button>
+        <button ion-item (click)="goMaintenance()">
+          <ion-icon name="settings"></ion-icon>
+          {{ 'ITEM_DETAIL_BUTTON_MAINTENANCE' | translate }}
+        </button>
+      </div>
+    </ion-list>
   </div>
 </ion-content>
 

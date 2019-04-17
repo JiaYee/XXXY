@@ -25,10 +25,11 @@ export class MileagePage {
   )
   {
     this.item = this.navParams.get('item');
+    console.log(this.item);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MileagePage');
+  ionViewDidLoad()
+  {
   }
 
 }

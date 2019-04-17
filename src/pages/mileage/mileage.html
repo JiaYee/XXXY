@@ -10,6 +10,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-progress-bar value="0.5"></ion-progress-bar>
+<ion-content>
+  <ion-card padding>
+    墨头清理
+    <progress-bar progress="{{ item.headclean }}" [color]="'#488aff'"></progress-bar>
+    <ion-note>最后清理：{{ item.lastclean }}</ion-note>
+  </ion-card>
+  <ion-card padding>
+    更换墨头
+    <progress-bar progress="{{ item.headreplace }}" [color]="'#488aff'"></progress-bar>
+    <ion-note>最后更换：{{ item.lastreplace }}</ion-note>
+  </ion-card>
+  <ion-card padding>
+    检修机身
+    <progress-bar progress="{{ item.bodycheck }}" [color]="'#488aff'"></progress-bar>
+    <ion-note>最后检查：{{ item.lastcheck }}</ion-note>
+  </ion-card>
 </ion-content>

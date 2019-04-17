@@ -1,0 +1,65 @@
+<!--
+  Generated template for the PrintPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'PRINT_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button full (click)="uploadDoc()">
+    <ion-icon name="cloud-upload"></ion-icon>
+    {{ 'PRINT_BUTTON_UPLOAD' | translate }}
+  </button>
+  <ion-list>
+    <ion-item>
+      {{ 'PRINT_BUTTON_RANGE' | translate }}
+      <button ion-button small round item-right>{{ 'PRINT_BUTTON_RANGE_ALL' | translate }}</button>
+    </ion-item>
+    <ion-item>
+      {{ 'PRINT_BUTTON_COPIES' | translate }}
+      <button ion-button small round item-right (click)="minusCopies()">-</button>
+      <p item-right>{{ copies }}</p>
+      <button ion-button small round item-right (click)="addCopies()">+</button>
+    </ion-item>
+    <ion-item>
+      {{ 'PRINT_BUTTON_PAPERTYPE' | translate }}
+      <button *ngIf="checkPaperType('A3')" (click)="setPaperType('A3')" ion-button small round item-right>A3</button>
+      <button *ngIf="!checkPaperType('A3')" (click)="setPaperType('A3')" ion-button outline small round item-right>A3</button>
+      <button *ngIf="checkPaperType('A4')" (click)="setPaperType('A4')" ion-button small round item-right>A4</button>
+      <button *ngIf="!checkPaperType('A4')" (click)="setPaperType('A4')" ion-button outline small round item-right>A4</button>
+    </ion-item>
+    <ion-item>
+      {{ 'PRINT_BUTTON_BNW' | translate }}
+      <button *ngIf="checkBNW('彩色')" (click)="setBNW('彩色')" ion-button small round item-right>彩色</button>
+      <button *ngIf="!checkBNW('彩色')" (click)="setBNW('彩色')" ion-button outline small round item-right>彩色</button>
+      <button *ngIf="checkBNW('黑白')" (click)="setBNW('黑白')" ion-button small round item-right>黑白</button>
+      <button *ngIf="!checkBNW('黑白')" (click)="setBNW('黑白')" ion-button outline small round item-right>黑白</button>
+    </ion-item>
+    <ion-item>
+      {{ 'PRINT_BUTTON_DUPLEX' | translate }}
+      <button *ngIf="checkDuplex('单面')" (click)="setDuplex('单面')" ion-button small round item-right>单面</button>
+      <button *ngIf="!checkDuplex('单面')" (click)="setDuplex('单面')" ion-button outline small round item-right>单面</button>
+      <button *ngIf="checkDuplex('双面')" (click)="setDuplex('双面')" ion-button small round item-right>双面</button>
+      <button *ngIf="!checkDuplex('双面')" (click)="setDuplex('双面')" ion-button outline small round item-right>双面</button>
+    </ion-item>
+    <ion-item>
+      {{ 'PRINT_BUTTON_ORIENTATION' | translate }}
+      <button *ngIf="checkOrientation('横向')" (click)="setOrientation('横向')" ion-button small round item-right>横向</button>
+      <button *ngIf="!checkOrientation('横向')" (click)="setOrientation('横向')" ion-button outline small round item-right>横向</button>
+      <button *ngIf="checkOrientation('纵向')" (click)="setOrientation('纵向')" ion-button small round item-right>纵向</button>
+      <button *ngIf="!checkOrientation('纵向')" (click)="setOrientation('纵向')" ion-button outline small round item-right>纵向</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <button color="secondary" ion-button full (click)="submitOrder()">
+    <ion-icon name="logo-yen"></ion-icon>
+    微信支付 {{ copies }} 元
+  </button>
+</ion-footer>

@@ -1,45 +1,44 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>{{ pageTitle }}</ion-title>
+    <ion-title>我的订单</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content>
-
-  <form [formGroup]="form" *ngIf="settingsReady">
-    <ion-list *ngIf="page == 'main'">
-      <ion-item>
-        <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
-        <ion-toggle formControlName="option1"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>{{ 'SETTINGS_OPTION2' | translate }}</ion-label>
-        <ion-input formControlName="option2"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>{{ 'SETTINGS_OPTION3' | translate }}</ion-label>
-        <ion-select formControlName="option3">
-          <ion-option value="1" checked="true">1</ion-option>
-          <ion-option value="2">2</ion-option>
-          <ion-option value="3">3</ion-option>
-        </ion-select>
-      </ion-item>
-
-      <button ion-item [navPush]="subSettings" [navParams]="profileSettings">
-        {{ 'SETTINGS_PROFILE_BUTTON' | translate }}
-      </button>
-    </ion-list>
-
-    <ion-list *ngIf="page == 'profile'">
-      <ion-item>
-        <ion-label>{{ 'SETTINGS_OPTION4' | translate }}</ion-label>
-        <ion-input formControlName="option4"></ion-input>
-      </ion-item>
-    </ion-list>
-  </form>
-
+  <ion-card padding>
+    <ion-card-title>
+      <ion-icon name="document"></ion-icon>
+      会议报告.pdf
+    </ion-card-title>
+    <ion-item>
+      <ion-icon name="print"></ion-icon>
+      领导办公室
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-yen"></ion-icon>
+      0.00 元
+    </ion-item>
+    <button ion-button full outline (click)="goQR()">
+      <ion-icon name="qr-scanner"></ion-icon>
+      查看领取二维码
+    </button>
+  </ion-card>
+  <ion-card padding>
+    <ion-card-title>
+      <ion-icon name="document"></ion-icon>
+      讲义123.docx
+    </ion-card-title>
+    <ion-item>
+      <ion-icon name="print"></ion-icon>
+      图书馆自助打印2号机
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-yen"></ion-icon>
+      1.80 元
+    </ion-item>
+    <button ion-button full outline (click)="goQR()">
+      <ion-icon name="qr-scanner"></ion-icon>
+      查看领取二维码
+    </button>
+  </ion-card>
 </ion-content>
