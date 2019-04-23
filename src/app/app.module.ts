@@ -13,6 +13,7 @@ import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 import { CommonProvider } from '../providers/common/common';
+import { BmobProvider } from '../providers/bmob/bmob';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -67,6 +68,7 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CommonProvider,
+    BmobProvider,
   ]
 })
 export class AppModule { }

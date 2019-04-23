@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CommonProvider } from '../../providers/common/common';
+import { BmobProvider } from '../../providers/bmob/bmob';
+
 /**
  * Generated class for the PrintPage page.
  *
@@ -25,6 +27,7 @@ export class PrintPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public common: CommonProvider,
+    public bmob: BmobProvider,
   )
   {
   }
@@ -41,8 +44,16 @@ export class PrintPage {
 
   submitOrder()
   {
-    this.navCtrl.pop();
-    this.common.showToast("成功支付提交订单！");
+    let tablename = "local";
+    let prop = "name";
+    let value = Date.now().toString();
+    this.bmob.createData(tablename, prop, value).then((res) => {
+      this.navCtrl.pop();
+      this.common.showToast("成功支付提交订单！");
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   }
 
   checkPaperType(papertype)
