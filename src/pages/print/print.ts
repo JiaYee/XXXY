@@ -23,6 +23,8 @@ export class PrintPage {
   duplex: any = "单面";
   orientation: any = "纵向";
 
+  item: any;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -30,6 +32,7 @@ export class PrintPage {
     public bmob: BmobProvider,
   )
   {
+    this.item = this.navParams.get('item');
   }
 
   ionViewDidLoad()
@@ -131,7 +134,10 @@ export class PrintPage {
 
   minusCopies()
   {
-    this.copies = this.copies-1;
+    if(this.copies > 1)
+    {
+      this.copies = this.copies-1;
+    }
   }
 
 

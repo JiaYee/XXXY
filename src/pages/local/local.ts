@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CommonProvider } from '../../providers/common/common';
 import { BmobProvider } from '../../providers/bmob/bmob';
-import Bmob from "hydrogen-js-sdk";
+import QrScanner from 'qr-scanner';
 
 /**
  * Generated class for the LocalPage page.
@@ -32,19 +32,8 @@ export class LocalPage {
 
   ionViewDidLoad()
   {
-    // this.subData();
-    let subData = setInterval(() => { this.countData() }, 1000);
+    let subData = setInterval(() => { this.countData() }, 3000);
   }
-
-  // subData()
-  // {
-  //   let ticker: number = 0;
-  //   setInterval(function() {
-  //     let query = Bmob.Query('local');
-  //     query.count().then((res) => {
-  //     })
-  //   }, 1000);
-  // }
 
   countData()
   {
@@ -61,7 +50,7 @@ export class LocalPage {
         var msg = new SpeechSynthesisUtterance("正在打印您的文件");
         msg.lang = 'zh';
         window.speechSynthesis.speak(msg);
-        this.common.showAlert("New Data", "GO!");
+        setTimeout(() => { this.showDone() }, 5000);
       }
       else
       {
@@ -71,8 +60,12 @@ export class LocalPage {
     })
   }
 
-  listData()
+  showDone()
   {
+    var msg = new SpeechSynthesisUtterance("您的文件已打印完成");
+    msg.lang = 'zh';
+    window.speechSynthesis.speak(msg);
+    this.common.showAlert("您的文件已打印完成", "");
   }
 
   create()

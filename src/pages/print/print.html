@@ -58,8 +58,12 @@
 </ion-content>
 
 <ion-footer>
-  <button color="secondary" ion-button full (click)="submitOrder()">
+  <button *ngIf="!item.isOwner" color="secondary" ion-button full (click)="submitOrder()">
     <ion-icon name="logo-yen"></ion-icon>
     微信支付 {{ copies }} 元
+  </button>
+  <button *ngIf="item.isOwner" color="secondary" ion-button full (click)="submitOrder()">
+    <ion-icon name="print"></ion-icon>
+    立即打印
   </button>
 </ion-footer>
