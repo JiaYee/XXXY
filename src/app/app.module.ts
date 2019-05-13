@@ -15,6 +15,7 @@ import { MyApp } from './app.component';
 import { CommonProvider } from '../providers/common/common';
 import { BmobProvider } from '../providers/bmob/bmob';
 
+// import { Printer, PrintOptions } from '@ionic-native/printer';
 import { File } from '@ionic-native/file';
 // import { FileChooser } from '@ionic-native/file-chooser';
 // import { Chooser } from '@ionic-native/chooser';
@@ -66,6 +67,7 @@ export function provideSettings(storage: Storage) {
     User,
     Camera,
     File,
+    // Printer,
     // FileChooser,
     // Chooser,
     SplashScreen,

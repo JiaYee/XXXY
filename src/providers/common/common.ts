@@ -40,6 +40,19 @@ export class CommonProvider {
     alert.present();
   }
 
+  consoleObj(res)
+  {
+    console.log(this.obj2String(res));
+  }
+
+  obj2String(obj)
+  {
+    let str = JSON.stringify(obj);
+    str = JSON.stringify(obj, null, 4); // (Optional) beautiful indented output.
+    return str;
+  }
+
+
   // httpPost(url, param)
   // {
   //   return new Promise((resolve, reject) => {

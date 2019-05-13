@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, Platform } from 'ionic-angular';
+import { CommonProvider } from '../../providers/common/common';
 
 import { File } from '@ionic-native/file';
+// import { Printer, PrintOptions } from '@ionic-native/printer';
+
+import docxConverter from 'docx-pdf';
+import Mammoth from 'mammoth';
 
 @IonicPage()
 @Component({
@@ -17,6 +22,8 @@ export class ChoosefilePage {
   }];
 
   constructor(
+    private common: CommonProvider,
+    // private printer: Printer,
     public navCtrl: NavController,
     public file: File,
     public plt: Platform
@@ -44,19 +51,34 @@ export class ChoosefilePage {
     let path = this.file.externalRootDirectory;
     let file = item.fullPath.substring(1, item.fullPath.length);
     // console.log(path, file);
-    this.file.readAsDataURL(path, file).then((res) => {
-        console.log(this.objConsole(res));
-      })
-    .catch((err) => {
-      console.log(this.objConsole(err));
-    })
-  }
+    // this.file.readAsDataURL(path, file).then((res) => {
+    //     console.log(this.objConsole(res));
+    //   })
+    // .catch((err) => {
+    //   console.log(this.objConsole(err));
+    // })
+    let pipi = path+file;
+    let popo = path+'output.pdf';
+    console.log(pipi, popo);
+    docxConverter(pipi, popo, function(err,result){
+    if(err){
+       console.log(err);
+      }
+     console.log('result'+result);
+    });
 
-  objConsole(obj)
-  {
-    let str = JSON.stringify(obj);
-    str = JSON.stringify(obj, null, 4); // (Optional) beautiful indented output.
-    return str;
+    // this.printer.check().then((res) => {
+    //   console.log("Available");
+    // })
+    // .catch((err) => {
+    //   console.log("Error");
+    // })
+    // Mammoth.convertToHtml({path: papa}).then((res) => {
+    //   this.common.consoleObj(res);
+    // })
+    // .catch((err) => {
+    //   this.common.consoleObj(err);
+    // })
   }
 
   listDir(path, dir)
