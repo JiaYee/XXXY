@@ -3,12 +3,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CommonProvider } from '../../providers/common/common';
 import { BmobProvider } from '../../providers/bmob/bmob';
 
+// import { FileChooser } from '@ionic-native/file-chooser';
+// import { Chooser } from '@ionic-native/chooser';
+
 /**
  * Generated class for the PrintPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+ // declare let filechooser: any;
 
 @IonicPage()
 @Component({
@@ -16,6 +20,7 @@ import { BmobProvider } from '../../providers/bmob/bmob';
   templateUrl: 'print.html',
 })
 export class PrintPage {
+
 
   papertype: any = "A4";
   copies: number = 1;
@@ -26,6 +31,8 @@ export class PrintPage {
   item: any;
 
   constructor(
+    // private chooser: Chooser,
+    // private fileChooser: FileChooser,
     public navCtrl: NavController,
     public navParams: NavParams,
     public common: CommonProvider,
@@ -42,7 +49,7 @@ export class PrintPage {
 
   uploadDoc()
   {
-    this.common.showToast("成功上传文件！")
+    this.navCtrl.push('ChoosefilePage');
   }
 
   submitOrder()

@@ -15,6 +15,9 @@ import { MyApp } from './app.component';
 import { CommonProvider } from '../providers/common/common';
 import { BmobProvider } from '../providers/bmob/bmob';
 
+import { File } from '@ionic-native/file';
+// import { FileChooser } from '@ionic-native/file-chooser';
+// import { Chooser } from '@ionic-native/chooser';
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -62,6 +65,9 @@ export function provideSettings(storage: Storage) {
     Items,
     User,
     Camera,
+    File,
+    // FileChooser,
+    // Chooser,
     SplashScreen,
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },

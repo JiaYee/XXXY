@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic File Navigation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button (click)="goUp()">
+    Go up
+  </button>
+
+  <div *ngFor="let item of items">
+
+    <button ion-item *ngIf="item.isDirectory" (click)="goDown(item)">
+      Directory: {{item.name}}
+    </button>
+
+    <ion-item *ngIf="item.isFile" (click)="viewDetail(item)">
+      File: {{item.name}}
+    </ion-item>
+
+  </div>
+
+</ion-content>
